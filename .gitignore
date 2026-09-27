@@ -1,5 +1,5 @@
 # ==========================================
-# ENVIRONMENT VARIABLES / SECRETS
+# ENVIRONMENT / SECRETS
 # ==========================================
 
 .env
@@ -16,53 +16,30 @@ __pycache__/
 
 venv/
 .venv/
-env/
-ENV/
+backend/venv/
+backend/.venv/
 
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 
 # ==========================================
-# NODE / FRONTEND
+# NODE
 # ==========================================
 
 node_modules/
+frontend/node_modules/
+
 dist/
 build/
 .vite/
 
 # ==========================================
-# LOCAL DATABASE / VECTOR STORAGE
+# CHROMA / VECTOR DATABASE
 # ==========================================
 
 chroma_db/
 **/chroma_db/
-
-*.sqlite
-*.sqlite3
-*.db
-
-# ==========================================
-# UPLOADED / GENERATED FILES
-# ==========================================
-
-backend/uploads/
-backend/uploads/profile_pictures/
-**/uploads/
-
-# ==========================================
-# HUGGING FACE CACHE / AI MODELS
-# ==========================================
-
-.cache/
-**/.cache/
-
-huggingface/
-**/huggingface/
-
-hf_models/
-**/hf_models/
 
 # ==========================================
 # DATASETS
@@ -70,6 +47,28 @@ hf_models/
 
 datasets/
 **/datasets/
+
+# ==========================================
+# MODELS
+# ==========================================
+
+models/
+**/models/
+
+# ==========================================
+# UPLOADED FILES
+# ==========================================
+
+uploads/
+**/uploads/
+
+# ==========================================
+# DATABASE FILES
+# ==========================================
+
+*.sqlite
+*.sqlite3
+*.db
 
 # ==========================================
 # LOGS
