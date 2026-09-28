@@ -41,7 +41,7 @@ import ScrollToTopButton from "../../components/common/ScrollToTopButton";
    CONSTANTS
 ========================================================= */
 
-const DEFAULT_RESULT_LIMIT = 10;
+const DEFAULT_RESULT_LIMIT = 15;
 
 const DEFAULT_FILTERS = {
   year: "",

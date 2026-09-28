@@ -56,7 +56,7 @@ class SearchRequest(BaseModel):
     )
 
     limit: int = Field(
-        default=10,
+        default=15,
         ge=1,
         le=100,
     )

@@ -57,7 +57,7 @@ export const recordVisitorLog = async (visitedPage) => {
 
 export const semanticSearch = async (
   query,
-  { limit = 20, year = null, division = null, caseNumber = null } = {},
+  { limit = 15, year = null, division = null, caseNumber = null } = {},
 ) => {
   const normalizedQuery = String(query || "")
     .trim()
@@ -79,7 +79,7 @@ export const semanticSearch = async (
   const response = await API.post("/api/user/search", {
     query: normalizedQuery,
 
-    limit: Math.min(Math.max(Number(limit) || 10, 1), 100),
+    limit: Math.min(Math.max(Number(limit) || 15, 1), 100),
 
     filters: {
       year: Number.isInteger(normalizedYear) ? normalizedYear : null,

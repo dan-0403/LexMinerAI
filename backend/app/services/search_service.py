@@ -193,7 +193,7 @@ class SearchService:
     def semantic_search(
         self,
         query: str,
-        limit: int = 10,
+        limit: int = 15,
         filters: SearchFilters | None = None,
     ) -> dict[str, Any]:
 
