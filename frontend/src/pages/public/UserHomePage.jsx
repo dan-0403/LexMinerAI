@@ -2228,7 +2228,7 @@ export default function UserHomePage() {
               <h3 className="contact">Contact</h3>
 
               <nav aria-label="Contact information" id="contact">
-                <a href="mailto:YOUR_EMAIL@gmail.com">
+                <a href="mailto:lexminer.ph@gmail.com">
                   <Mail size={15} />
                   lexminer.ph@gmail.com
                 </a>
