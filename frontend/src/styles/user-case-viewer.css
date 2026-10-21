@@ -1924,3 +1924,40 @@ body {
     overflow: auto;
   }
 }
+
+/* =========================================
+   CASE VIEWER: MOBILE SIDEBAR LAYOUT
+   Semantic evidence first, registered-user
+   features underneath
+========================================= */
+
+@media (max-width: 768px) {
+  .user-case-viewer-page .case-ai-column {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    min-width: 0;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .user-case-viewer-page .case-match-card {
+    order: 1;
+    width: 100%;
+    min-width: 0;
+    grid-column: 1 / -1;
+  }
+
+  .user-case-viewer-page .case-ai-tools-card {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+    grid-column: 1 / -1;
+  }
+
+  .user-case-viewer-page .case-match-card,
+  .user-case-viewer-page .case-ai-tools-card {
+    box-sizing: border-box;
+  }
+}
