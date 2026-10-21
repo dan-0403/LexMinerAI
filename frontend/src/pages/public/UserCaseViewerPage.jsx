@@ -1570,6 +1570,16 @@ export default function UserCaseViewerPage() {
                 </strong>
               </div>
 
+              <a
+                href={getOriginalPdfUrl(caseId)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="case-pdf-open-new-tab"
+              >
+                <ExternalLink size={17} />
+                <span>Open in New Tab</span>
+              </a>
+
               <button
                 type="button"
                 onClick={() => setPdfModalOpen(false)}
