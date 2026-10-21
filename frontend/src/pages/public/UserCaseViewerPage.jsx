@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-
+import CleanPdfViewer from "../../components/user/CleanPdfViewer";
 import {
   AlertCircle,
   ArrowLeft,
@@ -1546,7 +1546,7 @@ export default function UserCaseViewerPage() {
 
       {pdfModalOpen && (
         <div
-          className="case-modal-backdrop"
+          className="case-modal-backdrop case-original-pdf-backdrop"
           role="presentation"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
@@ -1554,25 +1554,41 @@ export default function UserCaseViewerPage() {
             }
           }}
         >
-          <section className="case-pdf-modal" role="dialog" aria-modal="true">
+          <section
+            className="case-pdf-modal case-original-pdf-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Original Supreme Court decision PDF"
+          >
             <header>
               <div>
                 <span>Original Supreme Court document</span>
-
-                <strong>{caseData.case_number || caseData.title}</strong>
+                <strong>
+                  {caseData.case_number ||
+                    caseData.title ||
+                    "Original decision"}
+                </strong>
               </div>
 
-              <button type="button" onClick={() => setPdfModalOpen(false)}>
+              <button
+                type="button"
+                onClick={() => setPdfModalOpen(false)}
+                aria-label="Close original PDF"
+              >
                 <X size={20} />
               </button>
             </header>
 
-            <iframe
-              src={getOriginalPdfUrl(caseId)}
-              title={`Original PDF for ${
-                caseData.case_number || caseData.title
-              }`}
-            />
+            <div className="case-original-pdf-content">
+              <CleanPdfViewer
+                pdfUrl={getOriginalPdfUrl(caseId)}
+                title={`Original PDF - ${
+                  caseData.case_number ||
+                  caseData.title ||
+                  "Supreme Court decision"
+                }`}
+              />
+            </div>
           </section>
         </div>
       )}
