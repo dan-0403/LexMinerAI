@@ -1998,3 +1998,10 @@ body {
     font-size: 13px;
   }
 }
+
+.case-pdf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}

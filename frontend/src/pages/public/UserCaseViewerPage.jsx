@@ -1561,15 +1561,16 @@ export default function UserCaseViewerPage() {
             aria-label="Original Supreme Court decision PDF"
           >
             <header>
-              <div>
-                <span>Original Supreme Court document</span>
-                <strong>
-                  {caseData.case_number ||
-                    caseData.title ||
-                    "Original decision"}
-                </strong>
-
-                <div>
+              <div className="case-pdf-header">
+                <div className="title">
+                  <span>Original Supreme Court document</span>
+                  <strong>
+                    {caseData.case_number ||
+                      caseData.title ||
+                      "Original decision"}
+                  </strong>
+                </div>
+                <div className="case-pdf-actions">
                   <a
                     href={getOriginalPdfUrl(caseId)}
                     target="_blank"
